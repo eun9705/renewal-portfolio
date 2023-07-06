@@ -1,4 +1,4 @@
-import { createGlobalStyle,styled } from 'styled-components';
+import { createGlobalStyle,styled,css } from 'styled-components';
 import { DeviceSize } from './Responsive';
 import SCD4 from '../Fonts/SCDream4.woff';
 import SCD5 from '../Fonts/SCDream5.woff';
@@ -17,14 +17,17 @@ export const GlobalStyle = createGlobalStyle`
         --gray02:#777777;
         --white:#FFFFFF;
         --white01:#F8F8F8;
+        --container-size-basic:140rem;
+        --gap:2rem;
     }
 
     //reset
-    html { font-size:62.5%; }
+    html { font-size:62.5%;overflow-x:hidden }
     * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:1.6rem;font-weight:400; }
     button { border:none;cursor: pointer; }
-    a { text-decoration:none; }
+    a { text-decoration:none;color:var(--black); }
     ol,li { list-style:none; }
+    strong { font-weight:600; }
 
     //font
     @font-face {
@@ -55,6 +58,7 @@ export const GlobalStyle = createGlobalStyle`
 
     ${DeviceSize.medium`
         html { font-size:50% }
+        * { font-size:1.4rem; }
     `}   
 
     ${DeviceSize.small`
@@ -62,11 +66,12 @@ export const GlobalStyle = createGlobalStyle`
 
     ${DeviceSize.xsmall`
         html { font-size:25% }
+        * { font-size:1.1rem; }
     `}   
 `;
 
 export const Container = styled.div`
-    width: 14.4rem;
+    width: var(--container-size-basic);
 `;
 
 export const SubPageTitle = styled.h1`
@@ -76,4 +81,19 @@ export const SubPageTitle = styled.h1`
 export const ProjectPageTitle = styled.h2`
     font-family: 'sCore';font-size:5rem;font-weight:500;
     span { font-family:'Pacifico';font-size:3rem;color:var(--gray02); }
+`
+
+export const FlexRow = styled.div<{align?:string,justify?:string}>`
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: ${(props) => props.align || "center"};
+    justify-content: ${(props) => props.justify || "center"};
+`
+
+export const FlexCol = styled.div<{align?:string,justify?:string}>`
+    display:flex;
+    flex-direction:column;
+    align-items: ${(props) => props.align || "center"};
+    justify-content: ${(props) => props.justify || "center"};
 `

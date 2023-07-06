@@ -1,11 +1,11 @@
 import { Routes,Route } from 'react-router-dom'
 import Header from './Components/Header';
-import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Work from './Pages/Work';
 import Detail from './Pages/Detail';
 import NotFound from './Pages/NotFound';
+import Footer from './Components/Footer';
 
 const App = () => {
     return (
