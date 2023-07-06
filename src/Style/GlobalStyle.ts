@@ -74,8 +74,20 @@ export const Container = styled.div`
     width: var(--container-size-basic);
 `;
 
-export const SubPageTitle = styled.h1`
-    font-family: 'sCore';font-size:8rem;font-weight:600;
+export const SubPageTitle = styled.h1<{size?:string,color?:string}>`
+    font-family: 'sCore';font-size:${(props) => props.size};font-weight:600;
+    span { color:${(props) => props.color};font-size:${(props) => props.size};font-weight:600; }
+`
+
+export const SubTitle = styled.h2<{color?:string,direction?:string}>`
+    width:100%;font-family: 'sCore';font-size:5rem;font-weight:600;position:relative;
+    span { color:${(props) => props.color};font-size:5rem;font-weight:600; }
+    &:after { 
+        content:'';position:absolute;left:0;bottom:1.4rem;width:46%;height: .5rem;background-color:${(props) => props.color};border-radius:0 .5rem .5rem 0; 
+        ${(props) => props.direction === 'right' && css`
+            left:auto;right:0;width:40.5%;border-radius:.5rem 0 0 .5rem; 
+        `}
+    }
 `
 
 export const ProjectPageTitle = styled.h2`
