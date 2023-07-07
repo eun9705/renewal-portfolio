@@ -12,7 +12,7 @@ const About = () => {
     return (
         <AboutWapper>
             <div className="textWrapper">
-                <SubPageTitle color={"#F2C94C"} size={"8rem"}>About <span>Eun Kyoung</span></SubPageTitle>
+                <SubPageTitle color={"#F2C94C"}>About <span>Eun Kyoung</span></SubPageTitle>
                 <p>
                     스타트업에서 프론트엔드 개발자로 근무하며 React, JavaScript, Scss, Git 등을 이용해<br />
                     웹 서비스 퍼블리싱, 개발업무를 담당하였습니다.<br /><br />
@@ -69,7 +69,7 @@ const AboutWapper = styled(FlexCol)`
     }
     .textWrapper { 
         width:100%;height:76.7rem;margin-left:26rem; 
-        p { margin-top:7rem;color:var(--gray02);line-height:3.2rem; }
+        p { margin-top:7rem;font-size:2rem;color:var(--gray02);line-height:3.2rem; }
         img { position:absolute;right:0;top:0; }
     }
 `;

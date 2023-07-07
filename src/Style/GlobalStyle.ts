@@ -26,7 +26,6 @@ export const GlobalStyle = createGlobalStyle`
     * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:1.6rem;font-weight:400; }
     button { border:none;cursor: pointer; }
     a { text-decoration:none;color:var(--black); }
-    ol,li { list-style:none; }
     strong { font-weight:600; }
 
     //font
@@ -74,9 +73,9 @@ export const Container = styled.div`
     width: var(--container-size-basic);
 `;
 
-export const SubPageTitle = styled.h1<{size?:string,color?:string}>`
-    font-family: 'sCore';font-size:${(props) => props.size};font-weight:600;
-    span { color:${(props) => props.color};font-size:${(props) => props.size};font-weight:600; }
+export const SubPageTitle = styled.h1<{color?:string}>`
+    font-family: 'sCore';font-size:8rem;font-weight:600;
+    span { color:${(props) => props.color};font-size:8rem;font-weight:600; }
 `
 
 export const SubTitle = styled.h2<{color?:string,direction?:string}>`
