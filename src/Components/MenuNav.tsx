@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import { FlexRow } from "../Style/GlobalStyle";
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 type SizeProps = {
     size:string;
@@ -9,7 +8,7 @@ type SizeProps = {
 
 const MenuNav = ({size,gap}:SizeProps) => {
     return (
-        <MenuWrapper fontSize={size} contentGap={gap}>
+        <MenuWrapper fontSize={size} gap={gap}>
             <Link to='/'>HOME</Link>
             <Link to='/about'>ABOUT</Link>
             <Link to='/work'>WORK</Link>
@@ -18,10 +17,10 @@ const MenuNav = ({size,gap}:SizeProps) => {
     );
 };
 
-const MenuWrapper = styled.div<{fontSize?:string,contentGap?:string}>`
+const MenuWrapper = styled.div<{fontSize?:string,gap?:string}>`
     * { font-size: ${(props)=>props.fontSize} }
     a { 
-        margin-left: ${(props)=>props.contentGap};font-weight:600; 
+        margin-left: ${(props)=>props.gap};font-weight:600; 
         &:first-child { margin-left:0; }    
     }
 `

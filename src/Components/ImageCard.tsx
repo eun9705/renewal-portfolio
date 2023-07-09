@@ -7,13 +7,12 @@ interface ImageProps {
 }
 
 const ImageCard = ({index,imgUrl}:ImageProps) => {
-    console.log(imgUrl);
     const navigator = useNavigate();
     const clickHandler = (id:number):void => {
-        navigator(`/detail/${id}`);
+        navigator(`/detail/${id}`,{state:"넘어가?"});
     }
     return <ImgCard onClick={()=>clickHandler(index)}>
-        <img src={`${process.env.PUBLIC_URL}/image/${imgUrl}`} alt="프로젝트 썸네일" />
+        <img src={`${process.env.PUBLIC_URL}/${imgUrl}`} alt="프로젝트 썸네일" />
     </ImgCard>
 };
 

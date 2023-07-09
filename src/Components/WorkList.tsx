@@ -46,7 +46,7 @@ const ContentBox = styled.div`
     li { font-size:2rem;line-height:4rem; }
 `
 
-const BadgeWrapper = styled(FlexRow)`
+const BadgeWrapper = styled.div`
     padding-left: 2rem;
     div { margin-right:1rem; }
 `

@@ -1,12 +1,12 @@
 import { styled } from 'styled-components';
 import { Container, FlexCol, FlexRow } from '../Style/GlobalStyle';
 import ImageCard from '../Components/ImageCard';
+import Banner from '../Components/Banner';
+import projectDummy from '../Dummy/projectData.json';
 import MainBg from '../Image/mainImg.png';
 import IntroduceBg from '../Image/IntroduceBg.svg';
-import Banner from '../Components/Banner';
 
 const Home = () => {
-    const imgArr:string[] = ["thumbnail_1.webp","thumbnail_2.webp","thumbnail_3.webp"];
     return (
         <FlexCol>
             <MainImg />
@@ -20,8 +20,8 @@ const Home = () => {
             <SideProjectBox>
                 <h2><span>Side</span> Project</h2>
                 <FlexRow justify='flex-start'>
-                    {imgArr.map((item,idx)=>{
-                        return <ImageCard key={idx} index={idx + 1} imgUrl={item}/>
+                    {projectDummy.map((item,idx)=>{
+                        return <ImageCard key={idx} index={idx + 1} imgUrl={item.thumbnail}/>
                     })}
                 </FlexRow>
             </SideProjectBox>
