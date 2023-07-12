@@ -15,8 +15,7 @@ interface ProjectData {
 }
 
 const Detail = () => {
-    const location = useLocation() as {pathname:string};
-    const { pathname } = location;
+    const { pathname } = useLocation();
     const id:string = pathname.split('/')[2];
     const detailNum:number = parseInt(id) - 1;
     const [detailInfo,setDetailInfo] = useState<ProjectData>();

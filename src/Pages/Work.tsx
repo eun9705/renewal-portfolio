@@ -11,7 +11,7 @@ const Work = () => {
                 <p className="companyName">(주)마크클라우드</p>
                 <span className="description">
                     AI 기반 솔루션 및 상표 이미지& 텍스트 검색 서비스 스타트업<br />
-                    2021.08 ~ 2022.1
+                    2021.08 ~ 2022.10
                 </span>
                 <ListWrapper>
                     {WorkDummy.map((item,idx)=>{
