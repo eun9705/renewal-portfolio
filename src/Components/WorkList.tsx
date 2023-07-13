@@ -27,7 +27,7 @@ const WorkList = ({listInfo}:WorkProps) => {
                 </ul>
                 <BadgeWrapper>
                     {stack.map((item,idx)=>{
-                        return <Badge name={item} color={"#F2C94C"} radius={"1rem"} key={idx}/>
+                        return <Badge key={idx} name={item} color={"#F2C94C"} radius={"1rem"} />
                     })}
                 </BadgeWrapper>
             </ContentBox>
@@ -36,6 +36,8 @@ const WorkList = ({listInfo}:WorkProps) => {
 };
 
 const ListContainer = styled(FlexRow)`
+    padding:10rem 0;border-bottom: 1px solid #CCC;
+    &:last-child { border-bottom:none; }
     p,span { font-size:2.6rem;font-weight:500; }
     > p { width:27.5rem;margin-right:13.1rem;white-space:pre-wrap; }
 `

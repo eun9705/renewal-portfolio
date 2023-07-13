@@ -15,10 +15,7 @@ const Work = () => {
                 </span>
                 <ListWrapper>
                     {WorkDummy.map((item,idx)=>{
-                        return <>
-                            <WorkList key={idx} listInfo={item}/>
-                            <hr />
-                        </>
+                        return <WorkList key={idx} listInfo={item}/>
                     })}
                 </ListWrapper>
             </Container>
@@ -34,13 +31,9 @@ const WorkWrapper = styled(FlexCol)`
 
 const ListWrapper = styled.div`
     margin: 5rem 0 30rem;
-    hr { 
-        margin:10rem 0;background-color:var(--gray02); 
-        &:last-child { display:none; }
-    }
     &::before,&::after { content:'';display:block;width:calc(100% + 24rem);height:.5rem; }
-    &::before { margin-bottom:10rem;border-radius: .5rem 0 0 .5rem;background-color:var(--sub01); }
-    &::after { position:relative;left:-24rem;margin-top:10rem;border-radius: 0 .5rem .5rem 0;background-color:var(--sub03); }
+    &::before { border-radius: .5rem 0 0 .5rem;background-color:var(--sub01); }
+    &::after { position:relative;left:-24rem;border-radius: 0 .5rem .5rem 0;background-color:var(--sub03); }
 `
 
 export default Work;
