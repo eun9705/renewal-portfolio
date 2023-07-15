@@ -29,7 +29,7 @@ const Detail = () => {
                     <span>{detailInfo?.eng}</span><br />
                     {detailInfo?.kor}
                 </ProjectPageTitle>
-                <img src={`${process.env.PUBLIC_URL}/${detailInfo?.mockup[0]}`} alt="프로젝트 목업 이미지 1" />
+                <img src={`${process.env.PUBLIC_URL}/${detailInfo?.mockup[0]}`} alt="프로젝트 목업 이미지 1" className='first'/>
                 <div className="contentWrap">
                     <Badge name={"Overview"} color={"#F2C94C"} radius={"3rem"} huge/>
                     <p>{detailInfo?.overview}</p>
@@ -46,7 +46,10 @@ const Detail = () => {
 const DetailWrapper = styled(FlexCol)`
     padding: 20rem 0;text-align:center;
     h2 { text-align:left; }
-    img:first-child { margin-top:-10rem; }
+    img {
+        width:100%;
+        &.first { margin-top:-10rem; }
+    }
     .contentWrap {
         margin: 1rem 0 15.6rem;
         p { margin-top:4rem;padding:0 10rem;font-size:2rem;color:var(--gray02);line-height:4rem;white-space:pre-wrap; }
