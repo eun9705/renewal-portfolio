@@ -15,7 +15,7 @@ const Header = () => {
 };
 
 const HeaderWrapper = styled.header`
-    position:absolute;left:0;top:0;display:flex;align-items:center;justify-content:space-between;width:100%;height:10rem;padding:0 5rem;box-sizing:border-box;
+    position:absolute;left:0;top:0;display:flex;align-items:center;justify-content:space-between;width:100vw;height:10rem;padding:0 5rem;box-sizing:border-box;
 `
 
 export default Header;

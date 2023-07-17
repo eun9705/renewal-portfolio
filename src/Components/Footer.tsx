@@ -18,7 +18,7 @@ const Footer = () => {
 };
 
 const FooterWrapper = styled.footer`
-    height: 20rem;padding:4.3rem 10rem;box-sizing:border-box;background-color:var(--white01);
+    width:100vw;height: 20rem;padding:4.3rem 10rem;box-sizing:border-box;background-color:var(--white01);
     div:last-child {
         margin-top:1rem;text-align: right;
         * { font-size:1.4rem; }
