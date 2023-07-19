@@ -11,7 +11,7 @@ const Banner = () => {
                 <p>기술스택, 경력 정보를 확인할 수 있어요.</p>
                 <Buttons name={"소개글 보기"} url={"/about"}/>
                 <Buttons name={"경력사항 보기"} url={"/work"}/>
-                <img src={BannerIcon} alt="배너 이미지" />
+                {/* <img src={BannerIcon} alt="배너 이미지" /> */}
             </div>
         </BannerWrapper>
     );
