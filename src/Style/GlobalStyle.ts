@@ -76,22 +76,20 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ${DeviceSize.large`
-        :root {
-            --container-size-basic:118rem;
-        }
+        html { font-size:75% }
     `}   
 
     ${DeviceSize.medium`
         html { font-size:50% }
-        * { font-size:1.4rem; }
+        * { font-size:14px; }
     `}   
 
     ${DeviceSize.small`
+        html { font-size:25% }
     `}   
 
     ${DeviceSize.xsmall`
-        html { font-size:25% }
-        * { font-size:1.1rem; }
+        * { font-size:11px; }
     `}   
 `;
 
