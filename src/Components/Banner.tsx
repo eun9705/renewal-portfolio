@@ -21,11 +21,13 @@ const Banner = () => {
 const BannerWrapper = styled(FlexCol)`
     width:100vw;height:30rem;background-color:#D5E6FB;padding-left:10rem;
     div { position:relative;width:164rem;}
-    img { position:absolute;bottom:-71.5px;right:0;width:44.3vw; }
+    img { position:absolute;bottom:-71.5px;right:0; }
     strong { font-size:2.6rem; }
     p { margin:1rem 0 4rem;color:var(--gray02); }
     ${DeviceSize.large`
-        div { width:120rem; }
+        overflow:hidden;padding:0;
+        div { width:var(--container-size-basic); }
+        img { width:50vw; }
     `}
 `
 
