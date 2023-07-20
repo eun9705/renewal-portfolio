@@ -13,7 +13,7 @@ const breakPointsProps:BreakPoints = {
 
 export const DeviceSize = Object.keys(breakPointsProps).reduce((acc, label) => {
     acc[label] = (literals: TemplateStringsArray, ...args:any[]) => css`
-        @media only screen and (max-width: ${breakPointsProps[label]}px) {
+        @media (max-width: ${breakPointsProps[label]}px) {
             ${css(literals, ...args)};
         }
     `

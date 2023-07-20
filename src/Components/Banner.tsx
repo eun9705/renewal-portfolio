@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 import { FlexCol, FlexRow } from '../Style/GlobalStyle';
 import Buttons from './Buttons';
 import BannerIcon from '../Image/bannerIcon.jpg';
+import { DeviceSize } from '../Style/Responsive';
 
 const Banner = () => {
     return (
@@ -23,6 +24,11 @@ const BannerWrapper = styled(FlexCol)`
     img { position:absolute;bottom:-71.5px;right:0; }
     strong { font-size:2.6rem; }
     p { margin:1rem 0 4rem;color:var(--gray02); }
+    ${DeviceSize.large`
+        overflow:hidden;padding:0;
+        div { width:var(--container-size-basic); }
+        img { width:50vw; }
+    `}
 `
 
 export default Banner;

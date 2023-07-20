@@ -22,32 +22,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     //reset
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-sizing: border-box;
-        vertical-align: baseline;
-    }
-    article, aside, details, figcaption, figure,
-    footer, header, hgroup, menu, nav, section {
-        display: block;
-    }
     html { font-size:62.5%; }
-    body { overflow-x:hidden;}
-    * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:1.6rem;font-weight:400; }
+    body { overflow-x:hidden; }
+    * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:1.6rem;font-weight:400;border: 0;box-sizing: border-box; }
     button { border:none;cursor: pointer; }
     a { text-decoration:none;color:var(--black); }
     strong { font-weight:600; }
@@ -82,16 +59,19 @@ export const GlobalStyle = createGlobalStyle`
     `}   
 
     ${DeviceSize.medium`
+        :root {
+            --container-size-basic:102.5rem;
+        }
         html { font-size:50% }
-        * { font-size:1.4rem; }
+        * { font-size:14px; }
     `}   
 
     ${DeviceSize.small`
+        html { font-size:25% }
     `}   
 
     ${DeviceSize.xsmall`
-        html { font-size:25% }
-        * { font-size:1.1rem; }
+        * { font-size:11px; }
     `}   
 `;
 
