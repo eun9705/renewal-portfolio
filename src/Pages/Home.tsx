@@ -5,6 +5,7 @@ import Banner from '../Components/Banner';
 import projectDummy from '../Dummy/projectData.json';
 import MainBg from '../Image/mainImg.png';
 import IntroduceBg from '../Image/IntroduceBg.svg';
+import { DeviceSize } from '../Style/Responsive';
 
 const Home = () => {
     return (
@@ -32,6 +33,9 @@ const Home = () => {
 
 const MainImg = styled.div`
     width:100vw;height:100vh;background:var(--white01) url(${MainBg}) no-repeat center / 40% auto;border-radius:0 0 150rem 150rem / 0 0 15rem 15rem;
+    ${DeviceSize.small`
+        height:50vh;min-height:450px;background-size:60% auto;
+    `}
 `
 
 const IntroduceBox = styled.div`

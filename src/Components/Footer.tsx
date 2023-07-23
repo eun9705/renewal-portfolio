@@ -1,6 +1,8 @@
 import { styled } from 'styled-components';
 import MenuNav from './MenuNav';
 import mailIcon from '../Image/emailIcon.png';
+import { FlexCol } from '../Style/GlobalStyle';
+import { DeviceSize } from '../Style/Responsive';
 
 const Footer = () => {
     return (
@@ -18,14 +20,20 @@ const Footer = () => {
 };
 
 const FooterWrapper = styled.footer`
-    width:100vw;height: 20rem;padding:4.3rem 10rem;box-sizing:border-box;background-color:var(--white01);
+    display:flex;flex-direction:column;justify-content:space-between;width:100vw;height:20rem;padding:4.3rem 10rem;box-sizing:border-box;background-color:var(--white01);
     div:last-child {
-        margin-top:1rem;text-align: right;
+        text-align: right;
         * { font-size:1.4rem; }
         p { display: inline-block;margin-bottom:2rem;padding-left:3rem;background:url(${mailIcon}) no-repeat center left / contain; }
         span { display:block; }
         strong { font-weight:600; }
     }
+    ${DeviceSize.small`
+        height:30rem;
+        div:last-child {
+            p { padding-left:6rem; }
+        }
+    `}
 `
 
 export default Footer;

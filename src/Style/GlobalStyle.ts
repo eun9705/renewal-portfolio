@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     //reset
-    html { font-size:62.5%; }
+    html { font-size:62.5%;overflow-x:hidden; }
     body { overflow-x:hidden; }
     * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:1.6rem;font-weight:400;border: 0;box-sizing: border-box; }
     button { border:none;cursor: pointer; }
