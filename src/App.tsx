@@ -9,7 +9,7 @@ import Footer from './Components/Footer';
 
 const App = () => {
     return (
-        <div className="App">
+        <div className="App" style={{overflowX:"hidden"}}>
             <Header />
             <Routes>
                 <Route path='/' element={<Home />}/>

@@ -22,8 +22,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     //reset
-    html { font-size:62.5%;overflow-x:hidden; }
-    body { overflow-x:hidden; }
+    html { font-size:62.5%;  }
+    html,body { overflow-x:hidden !important; }
     * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:1.6rem;font-weight:400;border: 0;box-sizing: border-box; }
     button { border:none;cursor: pointer; }
     a { text-decoration:none;color:var(--black); }
@@ -71,6 +71,9 @@ export const GlobalStyle = createGlobalStyle`
     `}   
 
     ${DeviceSize.xsmall`
+        :root {
+            --container-size-basic:75rem;
+        }
         * { font-size:11px; }
     `}   
 `;

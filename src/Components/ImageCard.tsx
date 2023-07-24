@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { DeviceSize } from '../Style/Responsive';
 
 interface ImageProps {
     index:number;
@@ -24,6 +25,13 @@ const ImgCard = styled.picture`
     &:hover { 
         img {transform:scale(1.2);}
     }
+    ${DeviceSize.small`
+        width:100%;height:75rem;
+        &:nth-child(odd) { margin-right:0; }
+    `}
+    ${DeviceSize.xsmall`
+        height:50rem;
+    `}
 `
 
 export default ImageCard;

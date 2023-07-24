@@ -1,11 +1,11 @@
 import { styled } from 'styled-components';
 import { Container, FlexCol, FlexRow } from '../Style/GlobalStyle';
+import projectDummy from '../Dummy/projectData.json';
+import { DeviceSize } from '../Style/Responsive';
 import ImageCard from '../Components/ImageCard';
 import Banner from '../Components/Banner';
-import projectDummy from '../Dummy/projectData.json';
 import MainBg from '../Image/mainImg.png';
 import IntroduceBg from '../Image/IntroduceBg.svg';
-import { DeviceSize } from '../Style/Responsive';
 
 const Home = () => {
     return (
@@ -34,19 +34,28 @@ const Home = () => {
 const MainImg = styled.div`
     width:100vw;height:100vh;background:var(--white01) url(${MainBg}) no-repeat center / 40% auto;border-radius:0 0 150rem 150rem / 0 0 15rem 15rem;
     ${DeviceSize.small`
-        height:50vh;min-height:450px;background-size:60% auto;
+        height:50vh;min-height:450px;background-size:55% auto;
     `}
 `
 
 const IntroduceBox = styled.div`
     width:100vw;margin:12rem 0 30rem;padding-top:26vw;background:url(${IntroduceBg}) no-repeat center top / 100%;
     p { font-size:3rem;text-align:center;line-height:5.1rem; }
+    ${DeviceSize.xsmall`
+        margin:12rem 0 20rem;
+    `}
 `
 const SideProjectBox  = styled(Container)`
     margin-bottom:7.6rem;
     * { font-size:8rem;font-family:'Pacifico'; }
     h2 { margin-bottom:1.6rem; }
     span { color:var(--sub02); }
+    ${DeviceSize.small`
+        margin-bottom:25rem;
+    `}
+    ${DeviceSize.xsmall`
+        margin-bottom:20rem;
+    `}
 `
 export default Home;
 

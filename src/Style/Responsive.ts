@@ -5,10 +5,10 @@ interface BreakPoints {
 }
 
 const breakPointsProps:BreakPoints = {
-    large:1440,
-    medium:1180,
-    small:820,
-    xsmall:414
+    large:1441,
+    medium:1181,
+    small:821,
+    xsmall:415
 }
 
 export const DeviceSize = Object.keys(breakPointsProps).reduce((acc, label) => {
