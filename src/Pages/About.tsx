@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { Container, FlexCol, FlexRow, SubPageTitle, SubTitle } from "../Style/GlobalStyle";
-import DotList from "../Components/DotList";
 import SkillDummy from '../Dummy/SkillData.json';
+import DotList from "../Components/DotList";
 import MainImg from '../Image/aboutImg.png';
 import list01 from '../Image/howWork_1.png';
 import list02 from '../Image/howWork_2.png';
