@@ -56,9 +56,6 @@ const DetailWrapper = styled(FlexCol)`
         p { margin-top:4rem;padding:0 10rem;font-size:2rem;color:var(--gray02);line-height:4rem;white-space:pre-wrap; }
     }
     hr { margin:8rem 0;background-color:#CCCCCC; }
-    ${DeviceSize.small`
-        > div { width:80vw; }
-    `}
 `
 
 export default Detail;

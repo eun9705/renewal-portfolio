@@ -19,18 +19,15 @@ const ImageCard = ({index,imgUrl}:ImageProps) => {
 };
 
 const ImgCard = styled.picture`
-    width:calc((var(--container-size-basic) - var(--gap)) / 2);height:51rem;margin-bottom:2rem;border-radius:1rem;cursor: pointer;overflow:hidden;
+    width:calc((var(--container-size-basic) - var(--gap)) / 2);height:26.6vw;margin-bottom:2rem;border-radius:1rem;cursor: pointer;overflow:hidden;
     &:nth-child(odd) { margin-right:var(--gap); }
     img { width:100%;height:100%;transition:.5s ease-in-out;object-fit:cover; }
     &:hover { 
         img {transform:scale(1.2);}
     }
     ${DeviceSize.small`
-        width:100%;height:75rem;
+        width:100%;height:50vw;
         &:nth-child(odd) { margin-right:0; }
-    `}
-    ${DeviceSize.xsmall`
-        height:50rem;
     `}
 `
 

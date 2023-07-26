@@ -46,16 +46,10 @@ const IntroduceBox = styled.div`
     `}
 `
 const SideProjectBox  = styled(Container)`
-    margin-bottom:7.6rem;
+    margin-bottom:22rem;
     * { font-size:8rem;font-family:'Pacifico'; }
     h2 { margin-bottom:1.6rem; }
     span { color:var(--sub02); }
-    ${DeviceSize.small`
-        margin-bottom:25rem;
-    `}
-    ${DeviceSize.xsmall`
-        margin-bottom:20rem;
-    `}
 `
 export default Home;
 

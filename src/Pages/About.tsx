@@ -7,24 +7,26 @@ import list01 from '../Image/howWork_1.png';
 import list02 from '../Image/howWork_2.png';
 import list03 from '../Image/howWork_3.png';
 import list04 from '../Image/howWork_4.png';
+import { DeviceSize } from "../Style/Responsive";
 
 const About = () => {
     return (
         <AboutWapper>
             <div className="textWrapper">
                 <SubPageTitle color={"#F2C94C"}>About <span>Eun Kyoung</span></SubPageTitle>
+                <img src={MainImg} alt="메인 이미지" className="mobile-only"/>
                 <p>
-                    스타트업에서 프론트엔드 개발자로 근무하며 React, JavaScript, Scss, Git 등을 이용해<br />
+                    스타트업에서 프론트엔드 개발자로 근무하며 React, JavaScript, Scss, Git 등을 이용해 <br className="mobile-none"/>
                     웹 서비스 퍼블리싱, 개발업무를 담당하였습니다.<br /><br />
 
                     항상 고객에게 편리하고 좋은 서비스(경험)를 제공할 수 있도록 고민하고<br />
-                    디자이너, 백엔드 개발자 등 다양한 직무의 동료들과<br />
+                    디자이너, 백엔드 개발자 등 다양한 직무의 동료들과<br className="mobile-none"/>
                     적극적으로 커뮤니케이션하며 협업했습니다. <br /><br />
 
-                    업무 외에도 개인의 역량과 전문성을 키우기 위해<br />
+                    업무 외에도 개인의 역량과 전문성을 키우기 위해 <br className="mobile-none"/>
                     알고리즘 문제 풀기, 인프런 강의 듣기 등 꾸준히 자기 개발을 하고 있습니다.<br />
                 </p>
-                <img src={MainImg} alt="메인 이미지" />
+                <img src={MainImg} alt="메인 이미지" className="mobile-none"/>
             </div>
             <HowWorkWrapper>
                 <SubTitle color={"#2F80ED"} direction={"right"}>How I <span>Work</span></SubTitle>
@@ -49,7 +51,7 @@ const About = () => {
                     <hr />
                     <FlexRow align="flex-start" justify="flex-start">
                         <p>Etc</p>
-                        <FlexRow>
+                        <FlexRow justify="flex-start">
                             {SkillDummy.etc.map((item,idx)=>{
                                 return <DotList name={item} dotColor={'#F2C94C'} key={idx}/>
                             })}
@@ -65,31 +67,56 @@ const AboutWapper = styled(FlexCol)`
     position:relative;margin-top: 20rem;
     h1 {
         position:relative;padding-top:5.8rem;
-        &:after { content:'';position:absolute;left:-26rem;bottom:-3.3rem;display:block;width:110rem;height:.5rem;border-radius:0 .5rem .5rem 0;background-color:var(--sub03); }
+        &:after { content:'';position:absolute;left:-13.55vw;bottom:-3.3rem;display:block;width:57.3vw;height:.5rem;border-radius:0 .5rem .5rem 0;background-color:var(--sub03); }
     }
     .textWrapper { 
-        width:100%;height:76.7rem;margin-left:26rem; 
+        position:relative;width:100%;height:40vw;margin-left:26rem; 
         p { margin-top:7rem;font-size:2rem;color:var(--gray02);line-height:3.2rem; }
-        img { position:absolute;right:0;top:0; }
+        img { position:absolute;right:13rem;top:0;z-index:-1;height:100%; }
     }
+    ${DeviceSize.large`
+        h1{
+            &:after  { width:68vw; }
+        }
+    `}
+
+    ${DeviceSize.small`
+        .textWrapper {
+            img { height:95%; }
+        }
+    `}
+
+${DeviceSize.xsmall`
+    h1 {
+        &:after {
+            width:100%;left:-7rem;
+        }
+    }
+        .textWrapper {
+            height:auto;padding:0 7rem;margin-left:0;
+            img { position:inherit;right:0;left:0;height:50rem;margin:10rem auto 0; }
+        }
+    `}
 `;
 
 const HowWorkWrapper = styled(FlexCol)`
     width:100%;margin: 11rem 0 20rem;text-align:center;
     div { display:flex;flex-direction:column; margin-top:8rem; }
     img {
-        align-self: flex-start;margin-bottom:1rem;
+        width:53.3vw;align-self: flex-start;margin-bottom:1rem;
         &:nth-child(even) { align-self: flex-end; }
     }
+    ${DeviceSize.xsmall`
+        img { width:100%; }
+    `}
 `
 
 const SkillWrapper = styled(FlexCol)`
     width:100%;margin-bottom:28rem;text-align:center;
     > div { 
-        padding:0 10rem;box-sizing:border-box; 
         > div {
             &:first-child { margin-top:15rem; }
-            p { width:23rem;font-size:2.8rem;font-weight:500;color:var(--gray02);text-align:left; }
+            p { width:23rem;padding-right:5rem;font-size:2.8rem;font-weight:500;color:var(--gray02);text-align:right; }
             > div { 
                 width:calc(100% - 23rem);flex-wrap:wrap; 
             }

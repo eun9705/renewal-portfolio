@@ -17,8 +17,9 @@ export const GlobalStyle = createGlobalStyle`
         --gray02:#777777;
         --white:#FFFFFF;
         --white01:#F8F8F8;
-        --container-size-basic:140rem;
+        --container-size-basic:75vw;
         --gap:2rem;
+        --skill-divide:3;
     }
 
     //reset
@@ -28,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     button { border:none;cursor: pointer; }
     a { text-decoration:none;color:var(--black); }
     strong { font-weight:600; }
+    .mobile-only { display:none; }
 
     //font
     @font-face {
@@ -54,14 +56,11 @@ export const GlobalStyle = createGlobalStyle`
 
     ${DeviceSize.large`
         :root {
-            --container-size-basic:118rem;
+            --skill-divide:2
         }
-    `}   
+    `}
 
     ${DeviceSize.medium`
-        :root {
-            --container-size-basic:102.5rem;
-        }
         html { font-size:50% }
         * { font-size:14px; }
     `}   
@@ -71,10 +70,9 @@ export const GlobalStyle = createGlobalStyle`
     `}   
 
     ${DeviceSize.xsmall`
-        :root {
-            --container-size-basic:75rem;
-        }
         * { font-size:11px; }
+        .mobile-none { display:none; }
+        .mobile-only { display:block; }
     `}   
 `;
 
@@ -91,9 +89,11 @@ export const SubTitle = styled.h2<{color?:string,direction?:string}>`
     width:100%;font-family: 'sCore';font-size:5rem;font-weight:600;position:relative;
     span { color:${(props) => props.color};font-size:5rem;font-weight:600; }
     &:after { 
-        content:'';position:absolute;left:0;bottom:1.4rem;width:46%;height: .5rem;background-color:${(props) => props.color};border-radius:0 .5rem .5rem 0; 
+        content:'';position:absolute;left:0;bottom:1.4rem;width:calc(50% - 10rem);height: .5rem;background-color:${(props) => props.color};border-radius:0 .5rem .5rem 0; 
         ${(props) => props.direction === 'right' && css`
-            left:auto;right:0;width:40.5%;border-radius:.5rem 0 0 .5rem; 
+            left:auto;right:0;
+            width:calc(50% - 20rem);
+            border-radius:.5rem 0 0 .5rem; 
         `}
     }
 `

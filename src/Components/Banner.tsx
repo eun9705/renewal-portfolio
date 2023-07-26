@@ -20,7 +20,7 @@ const Banner = () => {
 
 const BannerWrapper = styled(FlexCol)`
     width:100vw;height:30rem;background-color:#D5E6FB;
-    div { position:relative;width:85.4vw;max-width:164rem; }
+    div { position:relative;width:85.4vw; }
     img { position:absolute;bottom:-71.5px;right:0; }
     strong { font-size:2.6rem; }
     p { margin:1rem 0 4rem;color:var(--gray02);position:relative;z-index:1; }
@@ -34,7 +34,7 @@ const BannerWrapper = styled(FlexCol)`
         img { bottom:-16px; }
     `}
     ${DeviceSize.xsmall`
-        div { min-width:300px; }
+        div { max-width:300px; }
         img { bottom:-22.5px; }
     `}
 `
