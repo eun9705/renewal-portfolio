@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <GlobalStyle />
-        <Routes>
+        <Routes basename={process.env.PUBLIC_URL}>
           <ScrollToTop />
           <App />
         </Routes>
