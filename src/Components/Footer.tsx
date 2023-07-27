@@ -1,8 +1,7 @@
 import { styled } from 'styled-components';
 import MenuNav from './MenuNav';
-import mailIcon from '../Image/emailIcon.png';
-import { FlexCol } from '../Style/GlobalStyle';
 import { DeviceSize } from '../Style/Responsive';
+import mailIcon from '../Image/emailIcon.png';
 
 const Footer = () => {
     return (

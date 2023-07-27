@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
-import Badge from "./Badge";
 import { FlexRow } from "../Style/GlobalStyle";
+import { DeviceSize } from "../Style/Responsive";
+import Badge from "./Badge";
 
 interface WorkProps {
     listInfo: {
@@ -40,17 +41,33 @@ const ListContainer = styled(FlexRow)`
     &:last-child { border-bottom:none; }
     p,span { font-size:2.6rem;font-weight:500; }
     > p { width:27.5rem;margin-right:13.1rem;white-space:pre-wrap; }
+    ${DeviceSize.medium`
+        justify-content:space-between;
+        > p { width:auto;margin-right:0; }
+    `}
+    ${DeviceSize.small`
+        > p { width:100%;margin:0 0 5rem; }
+    `}
+    ${DeviceSize.xsmall`
+        p,span { font-size:3.4rem; }
+    `}
 `
 
 const ContentBox = styled.div`
     span { font-size:2.2rem;font-weight:500;color:var(--gray02); }
     ul { margin-top:3rem;padding-left:2rem; }
-    li { font-size:2rem;line-height:4rem; }
+    li { line-height:calc(var(--basic-font-size) * 1.6); }
+    ${DeviceSize.xsmall`
+        span { font-size:3rem; }
+    `}
 `
 
 const BadgeWrapper = styled.div`
-    padding-left: 2rem;
+    margin-top:.5rem;padding-left: 2rem;
     div { margin-right:1rem; }
+    ${DeviceSize.xsmall`
+        div { margin-bottom:1rem; }
+    `}
 `
 
 export default WorkList;

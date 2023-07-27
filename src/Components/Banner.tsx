@@ -11,7 +11,7 @@ const Banner = () => {
                 <strong>더 궁금하다면 지금 바로 클릭해보세요!</strong>
                 <p>기술스택, 경력 정보를 확인할 수 있어요.</p>
                 <Buttons name={"소개글 보기"} url={"/about"}/>
-                <Buttons name={"경력사항 보기"} url={"/work"} positionBool/>
+                <Buttons name={"경력사항 보기"} url={"/work"}/>
                 <img src={BannerIcon} alt="배너 이미지" />
             </div>
         </BannerWrapper>
@@ -23,7 +23,7 @@ const BannerWrapper = styled(FlexCol)`
     div { position:relative;width:85.4vw; }
     img { position:absolute;bottom:-71.5px;right:0; }
     strong { font-size:2.6rem; }
-    p { margin:1rem 0 4rem;color:var(--gray02);position:relative;z-index:1; }
+    p { position:relative;z-index:1;margin:1rem 0 4rem;font-size:1.6rem;color:var(--gray02); }
     ${DeviceSize.large`
         img { width:50%; }
     `}

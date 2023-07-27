@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
 type SizeProps = {
-    size:string;
+    size?:string;
     gap:string;
 }
 
@@ -17,8 +17,8 @@ const MenuNav = ({size,gap}:SizeProps) => {
     );
 };
 
-const MenuWrapper = styled.div<{fontSize?:string,gap?:string}>`
-    * { font-size: ${(props)=>props.fontSize} }
+const MenuWrapper = styled.div<{fontSize?:string,gap:string}>`
+    * { font-size: ${(props)=>props.fontSize ? props.fontSize : "2rem"} }
     a { 
         margin-left: ${(props)=>props.gap};font-weight:600; 
         &:first-child { margin-left:0; }    

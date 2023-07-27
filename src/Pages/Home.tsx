@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { Container, FlexCol, FlexRow } from '../Style/GlobalStyle';
-import projectDummy from '../Dummy/projectData.json';
 import { DeviceSize } from '../Style/Responsive';
+import projectDummy from '../Dummy/projectData.json';
 import ImageCard from '../Components/ImageCard';
 import Banner from '../Components/Banner';
 import MainBg from '../Image/mainImg.png';

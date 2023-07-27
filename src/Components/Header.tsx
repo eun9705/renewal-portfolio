@@ -1,8 +1,8 @@
 import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
 import MenuNav from './MenuNav';
-import Logo from '../Image/logo.png'
 import { DeviceSize } from '../Style/Responsive';
+import Logo from '../Image/logo.png'
 
 const Header = () => {
     return (
@@ -10,7 +10,7 @@ const Header = () => {
             <Link to='/'>
                 <img src={Logo} alt='로고 이미지'/>
             </Link>
-            <MenuNav size={"2rem"} gap={"3rem"}/>
+            <MenuNav gap={"3rem"}/>
         </HeaderWrapper>
     );
 };

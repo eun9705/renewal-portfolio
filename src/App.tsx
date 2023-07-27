@@ -9,14 +9,14 @@ import Footer from './Components/Footer';
 
 const App = () => {
     return (
-        <div className="App" style={{overflowX:"hidden"}}>
+        <div className="App">
             <Header />
             <Routes>
                 <Route path='/' element={<Home />}/>
                 <Route path='/about' element={<About />}/>
                 <Route path='/work' element={<Work />}/>
                 <Route path='/detail/:id' element={<Detail />}/>
-                <Route path='/*' element={<NotFound />}/>
+                <Route path='/error' element={<NotFound />}/>
             </Routes>
             <Footer />
         </div>

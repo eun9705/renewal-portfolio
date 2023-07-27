@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { Container, FlexCol, SubPageTitle } from "../Style/GlobalStyle";
-import WorkList from "../Components/WorkList";
 import WorkDummy from '../Dummy/WorkData.json';
+import WorkList from "../Components/WorkList";
 
 const Work = () => {
     return (
@@ -31,9 +31,9 @@ const WorkWrapper = styled(FlexCol)`
 
 const ListWrapper = styled.div`
     margin: 5rem 0 30rem;
-    &::before,&::after { content:'';display:block;width:calc(100% + 24rem);height:.5rem; }
+    &::before,&::after { content:'';display:block;width:calc(100% + 40rem);height:.5rem; }
     &::before { border-radius: .5rem 0 0 .5rem;background-color:var(--sub01); }
-    &::after { position:relative;left:-24rem;border-radius: 0 .5rem .5rem 0;background-color:var(--sub03); }
+    &::after { position:relative;left:-40rem;border-radius: 0 .5rem .5rem 0;background-color:var(--sub03); }
 `
 
 export default Work;

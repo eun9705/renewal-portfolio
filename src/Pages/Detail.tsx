@@ -1,10 +1,10 @@
 import { useEffect,useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
-import projectDummy from '../Dummy/projectData.json';
 import { Container, FlexCol, ProjectPageTitle } from '../Style/GlobalStyle';
-import Badge from '../Components/Badge';
 import { DeviceSize } from '../Style/Responsive';
+import projectDummy from '../Dummy/projectData.json';
+import Badge from '../Components/Badge';
 
 interface ProjectData {
     eng:string;
@@ -16,12 +16,17 @@ interface ProjectData {
 }
 
 const Detail = () => {
+    const navigator = useNavigate();
     const { pathname } = useLocation();
     const id:string = pathname.split('/')[2];
     const detailNum:number = parseInt(id) - 1;
     const [detailInfo,setDetailInfo] = useState<ProjectData>();
     useEffect(()=>{
-        setDetailInfo(projectDummy[detailNum]);
+        if(parseInt(id) > projectDummy.length) {
+            navigator('/error');
+        }else {
+            setDetailInfo(projectDummy[detailNum]);
+        }
     },[]);
     return (
         <DetailWrapper>
@@ -53,9 +58,17 @@ const DetailWrapper = styled(FlexCol)`
     }
     .contentWrap {
         margin: 1rem 0 15.6rem;
-        p { margin-top:4rem;padding:0 10rem;font-size:2rem;color:var(--gray02);line-height:4rem;white-space:pre-wrap; }
+        p { margin-top:4rem;padding:0 10rem;color:var(--gray02);line-height:calc(var(--basic-font-size) * 2);white-space:pre-wrap; }
     }
     hr { margin:8rem 0;background-color:#CCCCCC; }
+    ${DeviceSize.medium`
+        img {
+            &.first { margin-top:0; }
+        }
+        .contentWrap {
+            p { padding:0; }
+        }
+    `}
 `
 
 export default Detail;

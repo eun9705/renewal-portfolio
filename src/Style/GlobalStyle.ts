@@ -20,16 +20,18 @@ export const GlobalStyle = createGlobalStyle`
         --container-size-basic:75vw;
         --gap:2rem;
         --skill-divide:3;
+        --basic-font-size:2rem;
     }
 
     //reset
     html { font-size:62.5%;  }
     html,body { overflow-x:hidden !important; }
-    * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:1.6rem;font-weight:400;border: 0;box-sizing: border-box; }
+    * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:var(--basic-font-size);font-weight:400;border: 0;box-sizing: border-box; }
     button { border:none;cursor: pointer; }
     a { text-decoration:none;color:var(--black); }
     strong { font-weight:600; }
-    .mobile-only { display:none; }
+    .tablet-block { display:none; }
+    .mobile-block {  display:none; }
 
     //font
     @font-face {
@@ -62,17 +64,23 @@ export const GlobalStyle = createGlobalStyle`
 
     ${DeviceSize.medium`
         html { font-size:50% }
-        * { font-size:14px; }
     `}   
 
     ${DeviceSize.small`
-        html { font-size:25% }
+        :root {
+            --skill-divide:1
+        }
+        .tablet-none { display:none; }
+        .tablet-block { display:block; }
     `}   
 
-    ${DeviceSize.xsmall`
-        * { font-size:11px; }
+${DeviceSize.xsmall`
+        :root {
+            --basic-font-size:2.75rem;
+        }
+        html { font-size:25% }
         .mobile-none { display:none; }
-        .mobile-only { display:block; }
+        .mobile-block { display:block; }
     `}   
 `;
 
@@ -89,7 +97,7 @@ export const SubTitle = styled.h2<{color?:string,direction?:string}>`
     width:100%;font-family: 'sCore';font-size:5rem;font-weight:600;position:relative;
     span { color:${(props) => props.color};font-size:5rem;font-weight:600; }
     &:after { 
-        content:'';position:absolute;left:0;bottom:1.4rem;width:calc(50% - 10rem);height: .5rem;background-color:${(props) => props.color};border-radius:0 .5rem .5rem 0; 
+        content:'';position:absolute;left:0;bottom:1.4rem;width:calc(50% - 10rem);height:.5rem;background-color:${(props) => props.color};border-radius:0 .5rem .5rem 0; 
         ${(props) => props.direction === 'right' && css`
             left:auto;right:0;
             width:calc(50% - 20rem);

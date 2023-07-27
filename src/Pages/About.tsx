@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Container, FlexCol, FlexRow, SubPageTitle, SubTitle } from "../Style/GlobalStyle";
+import { DeviceSize } from "../Style/Responsive";
 import SkillDummy from '../Dummy/SkillData.json';
 import DotList from "../Components/DotList";
 import MainImg from '../Image/aboutImg.png';
@@ -7,14 +8,13 @@ import list01 from '../Image/howWork_1.png';
 import list02 from '../Image/howWork_2.png';
 import list03 from '../Image/howWork_3.png';
 import list04 from '../Image/howWork_4.png';
-import { DeviceSize } from "../Style/Responsive";
 
 const About = () => {
     return (
         <AboutWapper>
             <div className="textWrapper">
                 <SubPageTitle color={"#F2C94C"}>About <span>Eun Kyoung</span></SubPageTitle>
-                <img src={MainImg} alt="메인 이미지" className="mobile-only"/>
+                <img src={MainImg} alt="메인 이미지" className="tablet-block"/>
                 <p>
                     스타트업에서 프론트엔드 개발자로 근무하며 React, JavaScript, Scss, Git 등을 이용해 <br className="mobile-none"/>
                     웹 서비스 퍼블리싱, 개발업무를 담당하였습니다.<br /><br />
@@ -26,7 +26,7 @@ const About = () => {
                     업무 외에도 개인의 역량과 전문성을 키우기 위해 <br className="mobile-none"/>
                     알고리즘 문제 풀기, 인프런 강의 듣기 등 꾸준히 자기 개발을 하고 있습니다.<br />
                 </p>
-                <img src={MainImg} alt="메인 이미지" className="mobile-none"/>
+                <img src={MainImg} alt="메인 이미지" className="tablet-none"/>
             </div>
             <HowWorkWrapper>
                 <SubTitle color={"#2F80ED"} direction={"right"}>How I <span>Work</span></SubTitle>
@@ -71,27 +71,24 @@ const AboutWapper = styled(FlexCol)`
     }
     .textWrapper { 
         position:relative;width:100%;height:40vw;margin-left:26rem; 
-        p { margin-top:7rem;font-size:2rem;color:var(--gray02);line-height:3.2rem; }
-        img { position:absolute;right:13rem;top:0;z-index:-1;height:100%; }
+        p { margin-top:7rem;color:var(--gray02);line-height:calc(var(--basic-font-size) * 1.6); }
+        img { position:absolute;right:13rem;bottom:0;z-index:-1;height:100%; }
     }
     ${DeviceSize.large`
         h1{
             &:after  { width:68vw; }
         }
+        .textWrapper {
+            img { height:80%; }
+        }
     `}
 
     ${DeviceSize.small`
-        .textWrapper {
-            img { height:95%; }
+        h1 {
+            &:after {
+                width:100%;left:-7rem;
+            }
         }
-    `}
-
-${DeviceSize.xsmall`
-    h1 {
-        &:after {
-            width:100%;left:-7rem;
-        }
-    }
         .textWrapper {
             height:auto;padding:0 7rem;margin-left:0;
             img { position:inherit;right:0;left:0;height:50rem;margin:10rem auto 0; }
