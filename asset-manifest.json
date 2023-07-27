@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/renewal-portfolio/static/js/main.05a9b9e4.js",
+    "static/js/787.f841a49e.chunk.js": "/renewal-portfolio/static/js/787.f841a49e.chunk.js",
+    "static/media/SCDream5.woff": "/renewal-portfolio/static/media/SCDream5.e5b0215a7ef415f76192.woff",
+    "static/media/aboutImg.png": "/renewal-portfolio/static/media/aboutImg.712c3f2434d18848b1ab.png",
+    "static/media/SCDream6.woff": "/renewal-portfolio/static/media/SCDream6.7db8e5c24a9789b8ef32.woff",
+    "static/media/SCDream4.woff": "/renewal-portfolio/static/media/SCDream4.9f73937217a6115d8356.woff",
+    "static/media/mainImg.png": "/renewal-portfolio/static/media/mainImg.05810ed3bf8cb54caee3.png",
+    "static/media/Pacifico-Regular.woff": "/renewal-portfolio/static/media/Pacifico-Regular.6483d3abe9fab10157c2.woff",
+    "static/media/errorImg.svg": "/renewal-portfolio/static/media/errorImg.f77f874d34f9dff2d9d586c827222a29.svg",
+    "static/media/howWork_3.png": "/renewal-portfolio/static/media/howWork_3.7d26d5b03b1fc7187abc.png",
+    "static/media/howWork_4.png": "/renewal-portfolio/static/media/howWork_4.ad546d161fa18380a791.png",
+    "static/media/howWork_1.png": "/renewal-portfolio/static/media/howWork_1.2a4fe0f2c66ac7ec8945.png",
+    "static/media/bannerIcon.jpg": "/renewal-portfolio/static/media/bannerIcon.7af0ffe8b8518abe54b2.jpg",
+    "static/media/howWork_2.png": "/renewal-portfolio/static/media/howWork_2.8968b7666fb431271496.png",
+    "static/media/IntroduceBg.svg": "/renewal-portfolio/static/media/IntroduceBg.3a921b4266406349e28e5d751641bcc2.svg",
+    "index.html": "/renewal-portfolio/index.html",
+    "main.05a9b9e4.js.map": "/renewal-portfolio/static/js/main.05a9b9e4.js.map",
+    "787.f841a49e.chunk.js.map": "/renewal-portfolio/static/js/787.f841a49e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.05a9b9e4.js"
+  ]
+}
