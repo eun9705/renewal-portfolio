@@ -18,6 +18,7 @@ const Home = () => {
                     저만의 속도로 꾸준히 전진하는 중입니다.
                 </p>
             </IntroduceBox>
+            <Banner />
             <SideProjectBox>
                 <h2><span>Side</span> Project</h2>
                 <FlexRow justify='flex-start'>
@@ -26,7 +27,6 @@ const Home = () => {
                     })}
                 </FlexRow>
             </SideProjectBox>
-            <Banner />
         </FlexCol>
     );
 };
@@ -39,11 +39,8 @@ const MainImg = styled.div`
 `
 
 const IntroduceBox = styled.div`
-    width:100vw;margin:12rem 0 30rem;padding-top:26vw;background:url(${IntroduceBg}) no-repeat center top / 100%;
+    width:100vw;margin-top:12rem;padding-top:26vw;background:url(${IntroduceBg}) no-repeat center top / 100%;
     p { font-size:3rem;text-align:center;line-height:5.1rem; }
-    ${DeviceSize.xsmall`
-        margin:12rem 0 20rem;
-    `}
 `
 const SideProjectBox  = styled(Container)`
     margin-bottom:22rem;

@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
         --gray02:#777777;
         --white:#FFFFFF;
         --white01:#F8F8F8;
-        --container-size-basic:75vw;
+        --container-size-basic:80.2vw;
         --gap:2rem;
         --skill-divide:3;
         --basic-font-size:2rem;

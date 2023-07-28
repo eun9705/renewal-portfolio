@@ -2,41 +2,37 @@ import { styled } from 'styled-components';
 import { FlexCol } from '../Style/GlobalStyle';
 import { DeviceSize } from '../Style/Responsive';
 import Buttons from './Buttons';
-import BannerIcon from '../Image/bannerIcon.jpg';
+import bannerBg from '../Image/bannerBg.jpg';
+import bannerBgTablet from '../Image/bannerBgTablet.jpg';
+import bannerBgMobile from '../Image/bannerBgMobile.jpg';
 
 const Banner = () => {
     return (
-        <BannerWrapper>
+        <BannerWrapper align='flex-end'>
+            <strong>더 궁금하다면 지금 바로 클릭해보세요!</strong>
+            <p>기술스택, 경력 정보를 확인할 수 있어요.</p>
             <div>
-                <strong>더 궁금하다면 지금 바로 클릭해보세요!</strong>
-                <p>기술스택, 경력 정보를 확인할 수 있어요.</p>
                 <Buttons name={"소개글 보기"} url={"/about"}/>
                 <Buttons name={"경력사항 보기"} url={"/work"}/>
-                <img src={BannerIcon} alt="배너 이미지" />
             </div>
         </BannerWrapper>
     );
 };
 
 const BannerWrapper = styled(FlexCol)`
-    width:100vw;height:30rem;background-color:#D5E6FB;
-    div { position:relative;width:85.4vw; }
-    img { position:absolute;bottom:-71.5px;right:0; }
+    width:91.6vw;height:30rem;margin:20rem 0;padding:0 12rem;background:url(${bannerBg}) no-repeat center / cover;border-radius:2rem;
     strong { font-size:2.6rem; }
-    p { position:relative;z-index:1;margin:1rem 0 4rem;font-size:1.6rem;color:var(--gray02); }
-    ${DeviceSize.large`
-        img { width:50%; }
-    `}
+    p { margin:1rem 0 4rem;font-size:1.6rem;color:var(--gray02); }
     ${DeviceSize.medium`
-        img { bottom:-54px; }
+        background:url(${bannerBgTablet});
     `}
     ${DeviceSize.small`
-        img { bottom:-16px; }
+        background-position:left 40% center;
     `}
     ${DeviceSize.xsmall`
-        div { max-width:300px; }
-        img { bottom:-22.5px; }
+        padding:0 5rem;background:url(${bannerBgMobile});
     `}
+
 `
 
 export default Banner;

@@ -13,13 +13,13 @@ const ImageCard = ({index,imgUrl}:ImageProps) => {
         navigator(`/detail/${id}`);
     }
     return <ImgCard onClick={()=>clickHandler(index)}>
-        <source srcSet={`${process.env.PUBLIC_URL}/${imgUrl}.avif`} type="image/avif" />
+        <source srcSet={`${process.env.PUBLIC_URL}/${imgUrl}.webp`} type="image/webp" />
         <img src={`${process.env.PUBLIC_URL}/${imgUrl}.jpg`} alt="프로젝트 썸네일" />
     </ImgCard>
 };
 
 const ImgCard = styled.picture`
-    width:calc((var(--container-size-basic) - var(--gap)) / 2);height:26.6vw;margin-bottom:2rem;border-radius:1rem;cursor: pointer;overflow:hidden;
+    width:calc((var(--container-size-basic) - var(--gap)) / 2);height:29.2vw;margin-bottom:2rem;border-radius:1rem;cursor: pointer;overflow:hidden;
     &:nth-child(odd) { margin-right:var(--gap); }
     img { width:100%;height:100%;transition:.5s ease-in-out;object-fit:cover; }
     &:hover { 
