@@ -13,7 +13,7 @@ const ImageCard = ({index,imgUrl}:ImageProps) => {
         navigator(`/detail/${id}`);
     }
     return <ImgCard onClick={()=>clickHandler(index)}>
-        <source srcSet={`${process.env.PUBLIC_URL}/${imgUrl}.avif`} type="image/avif" />
+        <source srcSet={`${process.env.PUBLIC_URL}/${imgUrl}.webp`} type="image/webp" />
         <img src={`${process.env.PUBLIC_URL}/${imgUrl}.jpg`} alt="프로젝트 썸네일" />
     </ImgCard>
 };

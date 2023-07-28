@@ -21,7 +21,8 @@ const Banner = () => {
 const BannerWrapper = styled(FlexCol)`
     width:100vw;height:30rem;background-color:#D5E6FB;
     div { position:relative;width:85.4vw; }
-    img { position:absolute;bottom:-71.5px;right:0; }
+    img { position:absolute;bottom:-5vw;right:0; }
+    /* img { position:absolute;bottom:-71.5px;right:0; } */
     strong { font-size:2.6rem; }
     p { position:relative;z-index:1;margin:1rem 0 4rem;font-size:1.6rem;color:var(--gray02); }
     ${DeviceSize.large`
