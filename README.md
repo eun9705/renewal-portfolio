@@ -2,7 +2,7 @@
 
 [DEMO](https://eun9705.github.io/renewal-portfolio/)
 
-![웹사이트 이미지](https://github.com/eun9705/renewal-portfolio/blob/main/thumbnail.png)
+![웹사이트 이미지](https://github.com/eun9705/renewal-portfolio/blob/main/thumbnail.jpg)
 
 ## 프로젝트 설명
 기존 포트폴리오 사이트는 인터랙션이 많고 가독성이 떨어진다고 판단하여 새로 제작하게 되었습니다.<br />
