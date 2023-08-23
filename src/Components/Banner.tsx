@@ -24,13 +24,13 @@ const BannerWrapper = styled(FlexCol)`
     strong { font-size:2.6rem; }
     p { margin:1rem 0 4rem;font-size:1.6rem;color:var(--gray02); }
     ${DeviceSize.medium`
-        background:url(${bannerBgTablet});
+        background-image:url(${bannerBgTablet});
     `}
     ${DeviceSize.small`
         background-position:left 40% center;
     `}
     ${DeviceSize.xsmall`
-        padding:0 5rem;background:url(${bannerBgMobile});
+        padding:0 5rem;background-image:url(${bannerBgMobile});
     `}
 
 `
