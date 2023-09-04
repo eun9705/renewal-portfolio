@@ -20,8 +20,9 @@ const Buttons = ({name,url}:StrProps) => {
 
 const BasicButton = styled.button<{hideImg?:boolean}>`
     position:relative;z-index:1;margin-right:1rem;padding: 1.5rem 3.9rem 1.5rem 2.4rem;background: var(--white) url(${arrowIcon}) no-repeat center right 1.5rem;border-radius:1rem;box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);font-size:1.6rem;font-weight:500;
+    &:last-child { margin:0; }
     ${DeviceSize.small`
-        background-size:1rem;
+        background-size:.7rem auto;
     `}
 `
 

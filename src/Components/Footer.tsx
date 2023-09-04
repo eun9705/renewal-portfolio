@@ -33,6 +33,12 @@ const FooterWrapper = styled.footer`
             p { padding-left:6rem; }
         }
     `}
+    ${DeviceSize.xsmall`
+        height:16rem;padding: 3rem;
+        div:last-child {
+            p { margin-bottom:1rem;padding-left: 1.5rem; }
+        }
+    `}
 `
 
 export default Footer;

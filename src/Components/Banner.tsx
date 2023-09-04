@@ -30,7 +30,8 @@ const BannerWrapper = styled(FlexCol)`
         background-position:left 40% center;
     `}
     ${DeviceSize.xsmall`
-        padding:0 5rem;background-image:url(${bannerBgMobile});
+        height:15rem;margin:12rem 0;padding:0 3rem;background-image:url(${bannerBgMobile});
+        p { margin:.5rem 0 3rem; }
     `}
 
 `

@@ -40,7 +40,10 @@ const MainImg = styled.div`
 
 const IntroduceBox = styled.div`
     width:100vw;margin-top:12rem;padding-top:26vw;background:url(${IntroduceBg}) no-repeat center top / 100%;
-    p { font-size:3rem;text-align:center;line-height:5.1rem; }
+    p { font-size:3rem;text-align:center;line-height:2em; }
+    ${DeviceSize.xsmall`
+        padding-top:30vw;
+    `}
 `
 const SideProjectBox  = styled(Container)`
     margin-bottom:22rem;

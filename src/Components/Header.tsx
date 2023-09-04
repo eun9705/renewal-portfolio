@@ -20,6 +20,9 @@ const HeaderWrapper = styled.header`
     ${DeviceSize.large`
         img { width:5rem; }
     `}
+    ${DeviceSize.small`
+        img { width:3.5rem; }
+    `}
     ${DeviceSize.xsmall`
         padding:0 2.5rem;
     `}

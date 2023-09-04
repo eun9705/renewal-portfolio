@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
+import { DeviceSize } from "../Style/Responsive";
 
 type SizeProps = {
     size?:string;
@@ -23,6 +24,10 @@ const MenuWrapper = styled.div<{fontSize?:string,gap:string}>`
         margin-left: ${(props)=>props.gap};font-weight:600; 
         &:first-child { margin-left:0; }    
     }
+    ${DeviceSize.xsmall`
+        * { font-size:2.5rem; }
+        a { margin-left:3rem; }
+    `}
 `
 
 export default MenuNav;
