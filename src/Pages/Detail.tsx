@@ -37,10 +37,10 @@ const Detail = () => {
                 </ProjectPageTitle>
                 <img src={`${process.env.PUBLIC_URL}/${detailInfo?.mockup[0]}`} alt="프로젝트 목업 이미지 1" className='first'/>
                 <div className="contentWrap">
-                    <Badge name={"Overview"} color={"#F2C94C"} radius={"3rem"} huge/>
+                    <Badge name={"Overview"} color={"#F2C94C"} radius={"1.875em"} huge/>
                     <p>{detailInfo?.overview}</p>
                     <hr />
-                    <Badge name={"Review"} color={"#219653"} radius={"3rem"} huge/>
+                    <Badge name={"Review"} color={"#219653"} radius={"1.875em"} huge/>
                     <p>{detailInfo?.review}</p>
                 </div>
                 <img src={`${process.env.PUBLIC_URL}/${detailInfo?.mockup[1]}`} alt="프로젝트 목업 이미지 2" />
@@ -50,23 +50,28 @@ const Detail = () => {
 };
 
 const DetailWrapper = styled(FlexCol)`
-    padding: 20rem 0;text-align:center;
+    padding: 10em 0;text-align:center;
     h2 { text-align:left; }
     img {
         width:100%;
-        &.first { margin-top:-10rem; }
+        &.first { margin-top:-5em; }
     }
     .contentWrap {
-        margin: 1rem 0 15.6rem;
-        p { margin-top:4rem;padding:0 10rem;color:var(--gray02);line-height:calc(var(--basic-font-size) * 2);white-space:pre-wrap; }
+        margin: .5em 0 7.8em;
+        p { margin-top:2em;padding:0 10rem;color:var(--gray02);line-height:calc(var(--basic-font-size) * 2);white-space:pre-wrap; }
     }
-    hr { margin:8rem 0;background-color:#CCCCCC; }
+    hr { height:1px;margin:4em 0;background-color:#CCCCCC; }
     ${media.medium} {
         img {
             &.first { margin-top:0; }
         }
         .contentWrap {
             p { padding:0; }
+        }
+    }
+    ${media.xsmall} {
+        .contentWrap {
+            p { line-height:2em; }
         }
     }
 `

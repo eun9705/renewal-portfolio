@@ -98,11 +98,11 @@ export const SubTitle = styled.h2<{color?:string,direction?:string}>`
     width:100%;font-family: 'sCore';font-size:5rem;font-weight:600;position:relative;
     span { color:${(props) => props.color};font-size:5rem;font-weight:600; }
     &:after { 
-        content:'';position:absolute;left:0;bottom:1.4rem;width:calc(50% - 10rem);height:.5rem;background-color:${(props) => props.color};border-radius:0 .5rem .5rem 0; 
+        content:'';position:absolute;left:0;bottom:.28em;width:calc(50% - 2em);height:.1em;background-color:${(props) => props.color};border-radius:0 .1em .1em 0; 
         ${(props) => props.direction === 'right' && css`
             left:auto;right:0;
-            width:calc(50% - 20rem);
-            border-radius:.5rem 0 0 .5rem; 
+            width:calc(50% - 4em); 
+            border-radius: .1em 0 0 .1em;
         `}
     }
 `

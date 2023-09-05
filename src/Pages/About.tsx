@@ -67,7 +67,7 @@ const AboutWapper = styled(FlexCol)`
     position:relative;margin-top: 20rem;
     h1 {
         position:relative;padding-top:5.8rem;
-        &:after { content:'';position:absolute;left:-13.55vw;bottom:-3.3rem;display:block;width:57.3vw;height:.5rem;border-radius:0 .5rem .5rem 0;background-color:var(--sub03); }
+        &:after { content:'';position:absolute;left:-13.55vw;bottom:-.43em;display:block;width:57.3vw;height:.0625em;border-radius:0 .5rem .5rem 0;background-color:var(--sub03); }
     }
     .textWrapper { 
         position:relative;width:100%;height:40vw;margin-left:26rem; 
@@ -93,6 +93,14 @@ const AboutWapper = styled(FlexCol)`
             img { position:inherit;right:0;left:0;height:50rem;margin:10rem auto 0; }
         }
     }
+    ${media.xsmall} {
+        margin-top:8em;
+        .textWrapper {
+            padding: 0 2.8em;
+            p { margin-top:2.8em;line-height:1.6em; }
+            img { height:20em; }
+        }
+    }
 `;
 
 const HowWorkWrapper = styled(FlexCol)`
@@ -103,7 +111,9 @@ const HowWorkWrapper = styled(FlexCol)`
         &:nth-child(even) { align-self: flex-end; }
     }
     ${media.xsmall} {
-        img { width:100%; }
+        margin: 8em 0;
+        div { margin-top:3.2em; }
+        img { width:100%;margin-bottom:1em; }
     }
 `
 
@@ -118,12 +128,14 @@ const SkillWrapper = styled(FlexCol)`
             }
         }
     }
-    hr { margin:4rem 0 5rem;background-color:var(--gray02); }
+    hr { height:1px;margin:4em 0 5em;background-color:var(--gray02); }
     ${media.xsmall} {
+        margin-bottom: 10em;
         > div {
             > div {
-                p { width:auto; }
-                > div { display:inline-block;width:auto; }
+                &:first-child { margin-top:6em; }
+                p { width:9.2em;padding-right:2em;font-size:1.2em; }
+                > div { width:calc(100% - 11.2em); }
             }
         }
     }

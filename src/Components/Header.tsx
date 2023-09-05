@@ -24,7 +24,7 @@ const HeaderWrapper = styled.header`
         img { width:3.5rem; }
     }
     ${media.xsmall} {
-        height:9em;padding:0 2.5rem;
+        height:9em;padding:0 2.5em;
         img { width:3.1em; }
     }
 `
