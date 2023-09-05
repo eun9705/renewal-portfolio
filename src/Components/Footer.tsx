@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 import MenuNav from './MenuNav';
-import { DeviceSize } from '../Style/Responsive';
+import { media } from '../Style/Responsive';
 import mailIcon from '../Image/emailIcon.png';
 
 const Footer = () => {
@@ -27,12 +27,19 @@ const FooterWrapper = styled.footer`
         span { display:block; }
         strong { font-weight:600; }
     }
-    ${DeviceSize.small`
+    ${media.small} {
         height:30rem;
         div:last-child {
             p { padding-left:6rem; }
         }
-    `}
+    }
+    ${media.xsmall} {
+        height:14em;padding: 2.5em;
+        div:last-child {
+            * { font-size:1em; }
+            p { margin-bottom:1em;padding-left: 2em; }
+        }
+    }
 `
 
 export default Footer;

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { FlexCol } from "../Style/GlobalStyle";
 import errorImg from '../Image/errorImg.svg';
-import { DeviceSize } from "../Style/Responsive";
+import { media } from "../Style/Responsive";
 
 const NotFound = () => {
     return (
@@ -18,13 +18,13 @@ const ErrorWrapper =styled(FlexCol)`
     img { height:60%; }
     strong {  font-size:4rem;color:var(--main); }
     p { margin-top:1rem; font-weight:500;color:var(--gray01); }
-    ${DeviceSize.small`
+    ${media.small} {
         img { height:auto; }
-    `}
-    ${DeviceSize.xsmall`
+    }
+    ${media.xsmall} {
         text-align:center;
         img { width:80%; }
-    `}
+    }
 `
 
 export default NotFound;

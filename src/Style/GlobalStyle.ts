@@ -1,5 +1,5 @@
 import { createGlobalStyle,styled,css } from 'styled-components';
-import { DeviceSize } from './Responsive';
+import { media } from './Responsive';
 import SCD4 from '../Fonts/SCDream4.woff';
 import SCD5 from '../Fonts/SCDream5.woff';
 import SCD6 from '../Fonts/SCDream6.woff';
@@ -25,13 +25,14 @@ export const GlobalStyle = createGlobalStyle`
 
     //reset
     html { font-size:62.5%;  }
-    html,body { overflow-x:hidden !important; }
-    * { margin:0;padding:0;font-family:'sCore', '맑은고딕', sans-serif;font-size:var(--basic-font-size);font-weight:400;border: 0;box-sizing: border-box; }
+    html,body { text-size-adjust:none;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;-o-text-size-adjust:none;overflow-x:hidden !important; }
+    body { font-family:'sCore', '맑은고딕', sans-serif;font-size:var(--basic-font-size);font-weight:400; }
+    * { margin:0;padding:0;border: 0;box-sizing: border-box;font-size:var(--basic-font-size); }
     button { border:none;cursor: pointer; }
     a { text-decoration:none;color:var(--black); }
     strong { font-weight:600; }
     .tablet-block { display:none; }
-    .mobile-block {  display:none; }
+    .mobile-block { display:none; }
 
     //font
     @font-face {
@@ -56,32 +57,32 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 400;
     }
 
-    ${DeviceSize.large`
+    ${media.large} {
         :root {
             --skill-divide:2
         }
-    `}
+    }
 
-    ${DeviceSize.medium`
-        html { font-size:50% }
-    `}   
+    ${media.medium} {
+        html { font-size:50%; }
+    }
 
-    ${DeviceSize.small`
+    ${media.small} {
         :root {
             --skill-divide:1
         }
         .tablet-none { display:none; }
         .tablet-block { display:block; }
-    `}   
+    }
 
-${DeviceSize.xsmall`
+    ${media.xsmall} {
         :root {
-            --basic-font-size:2.75rem;
+            --basic-font-size:2.5rem;
         }
-        html { font-size:25% }
+        html { font-size:25%; }
         .mobile-none { display:none; }
         .mobile-block { display:block; }
-    `}   
+    }
 `;
 
 export const Container = styled.div`
@@ -97,11 +98,11 @@ export const SubTitle = styled.h2<{color?:string,direction?:string}>`
     width:100%;font-family: 'sCore';font-size:5rem;font-weight:600;position:relative;
     span { color:${(props) => props.color};font-size:5rem;font-weight:600; }
     &:after { 
-        content:'';position:absolute;left:0;bottom:1.4rem;width:calc(50% - 10rem);height:.5rem;background-color:${(props) => props.color};border-radius:0 .5rem .5rem 0; 
+        content:'';position:absolute;left:0;bottom:.28em;width:calc(50% - 2em);height:.1em;background-color:${(props) => props.color};border-radius:0 .1em .1em 0; 
         ${(props) => props.direction === 'right' && css`
             left:auto;right:0;
-            width:calc(50% - 20rem);
-            border-radius:.5rem 0 0 .5rem; 
+            width:calc(50% - 4em); 
+            border-radius: .1em 0 0 .1em;
         `}
     }
 `
