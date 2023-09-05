@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { Container, FlexCol, FlexRow, SubPageTitle, SubTitle } from "../Style/GlobalStyle";
-import { DeviceSize } from "../Style/Responsive";
+import { media } from "../Style/Responsive";
 import SkillDummy from '../Dummy/SkillData.json';
 import DotList from "../Components/DotList";
 import MainImg from '../Image/aboutImg.png';
@@ -74,16 +74,15 @@ const AboutWapper = styled(FlexCol)`
         p { margin-top:7rem;color:var(--gray02);line-height:calc(var(--basic-font-size) * 1.6); }
         img { position:absolute;right:13rem;bottom:0;z-index:-1;height:100%; }
     }
-    ${DeviceSize.large`
+    ${media.large} {
         h1{
             &:after  { width:68vw; }
         }
         .textWrapper {
             img { height:80%; }
         }
-    `}
-
-    ${DeviceSize.small`
+    }
+    ${media.small} {
         h1 {
             &:after {
                 width:100%;left:-7rem;
@@ -93,7 +92,7 @@ const AboutWapper = styled(FlexCol)`
             height:auto;padding:0 7rem;margin-left:0;
             img { position:inherit;right:0;left:0;height:50rem;margin:10rem auto 0; }
         }
-    `}
+    }
 `;
 
 const HowWorkWrapper = styled(FlexCol)`
@@ -103,9 +102,9 @@ const HowWorkWrapper = styled(FlexCol)`
         width:53.3vw;align-self: flex-start;margin-bottom:1rem;
         &:nth-child(even) { align-self: flex-end; }
     }
-    ${DeviceSize.xsmall`
+    ${media.xsmall} {
         img { width:100%; }
-    `}
+    }
 `
 
 const SkillWrapper = styled(FlexCol)`
@@ -120,6 +119,14 @@ const SkillWrapper = styled(FlexCol)`
         }
     }
     hr { margin:4rem 0 5rem;background-color:var(--gray02); }
+    ${media.xsmall} {
+        > div {
+            > div {
+                p { width:auto; }
+                > div { display:inline-block;width:auto; }
+            }
+        }
+    }
 `
 
 export default About;

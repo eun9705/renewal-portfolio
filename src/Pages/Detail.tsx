@@ -2,7 +2,7 @@ import { useEffect,useState } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { Container, FlexCol, ProjectPageTitle } from '../Style/GlobalStyle';
-import { DeviceSize } from '../Style/Responsive';
+import { media } from '../Style/Responsive';
 import projectDummy from '../Dummy/projectData.json';
 import Badge from '../Components/Badge';
 
@@ -61,14 +61,14 @@ const DetailWrapper = styled(FlexCol)`
         p { margin-top:4rem;padding:0 10rem;color:var(--gray02);line-height:calc(var(--basic-font-size) * 2);white-space:pre-wrap; }
     }
     hr { margin:8rem 0;background-color:#CCCCCC; }
-    ${DeviceSize.medium`
+    ${media.medium} {
         img {
             &.first { margin-top:0; }
         }
         .contentWrap {
             p { padding:0; }
         }
-    `}
+    }
 `
 
 export default Detail;

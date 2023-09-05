@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 import { FlexCol } from '../Style/GlobalStyle';
-import { DeviceSize } from '../Style/Responsive';
+import { media } from '../Style/Responsive';
 import Buttons from './Buttons';
 import bannerBg from '../Image/bannerBg.jpg';
 import bannerBgTablet from '../Image/bannerBgTablet.jpg';
@@ -23,17 +23,16 @@ const BannerWrapper = styled(FlexCol)`
     width:91.6vw;height:30rem;margin:20rem 0;padding:0 12rem;background:url(${bannerBg}) no-repeat center / cover;border-radius:2rem;
     strong { font-size:2.6rem; }
     p { margin:1rem 0 4rem;font-size:1.6rem;color:var(--gray02); }
-    ${DeviceSize.medium`
+    ${media.medium} {
         background-image:url(${bannerBgTablet});
-    `}
-    ${DeviceSize.small`
+    }
+    ${media.small} {
         background-position:left 40% center;
-    `}
-    ${DeviceSize.xsmall`
-        height:15rem;margin:12rem 0;padding:0 3rem;background-image:url(${bannerBgMobile});
-        p { margin:.5rem 0 3rem; }
-    `}
-
+    }
+    ${media.xsmall} {
+        height:12em;margin:7em 0;padding:0 3em;background-image:url(${bannerBgMobile});border-radius:.8em;
+        p { margin:.2em 0 1.2em;font-size:1em; }
+    }
 `
 
 export default Banner;
