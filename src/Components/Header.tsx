@@ -1,7 +1,7 @@
-import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
-import MenuNav from './MenuNav';
+import { styled } from 'styled-components';
 import { media } from '../Style/Responsive';
+import MenuNav from './MenuNav';
 import Logo from '../Image/logo.png'
 
 const Header = () => {

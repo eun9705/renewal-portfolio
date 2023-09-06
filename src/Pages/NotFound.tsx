@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { FlexCol } from "../Style/GlobalStyle";
-import errorImg from '../Image/errorImg.svg';
 import { media } from "../Style/Responsive";
+import errorImg from '../Image/errorImg.svg';
 
 const NotFound = () => {
     return (
