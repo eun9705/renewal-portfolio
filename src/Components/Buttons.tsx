@@ -1,7 +1,7 @@
-import { styled } from 'styled-components';
 import { useNavigate } from 'react-router-dom'; 
-import arrowIcon from '../Image/arrowIcon.png';
+import { styled } from 'styled-components';
 import { media } from '../Style/Responsive';
+import arrowIcon from '../Image/arrowIcon.png';
 
 interface StrProps {
     name:string;

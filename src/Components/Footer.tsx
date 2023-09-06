@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
-import MenuNav from './MenuNav';
 import { media } from '../Style/Responsive';
+import MenuNav from './MenuNav';
 import mailIcon from '../Image/emailIcon.png';
 
 const Footer = () => {
