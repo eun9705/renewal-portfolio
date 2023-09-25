@@ -37,10 +37,10 @@ const WorkList = ({listInfo}:WorkProps) => {
 };
 
 const ListContainer = styled(FlexRow)`
-    padding:10rem 0;border-bottom: 1px solid #CCC;
+    flex-wrap:nowrap;padding:10rem 0;border-bottom: 1px solid #CCC;
     &:last-child { border-bottom:none; }
     p,span { font-size:2.6rem;font-weight:500; }
-    > p { width:27.5rem;margin-right:13.1rem;white-space:pre-wrap; }
+    > p { min-width:27.5rem;margin-right:13.1rem;white-space:pre-wrap; }
     ${DeviceSize.medium`
         justify-content:space-between;
         > p { width:auto;margin-right:0; }
@@ -64,10 +64,7 @@ const ContentBox = styled.div`
 
 const BadgeWrapper = styled.div`
     margin-top:.5rem;padding-left: 2rem;
-    div { margin-right:1rem; }
-    ${DeviceSize.xsmall`
-        div { margin-bottom:1rem; }
-    `}
+    div { margin-right:1rem;margin-bottom:1rem; }
 `
 
 export default WorkList;
