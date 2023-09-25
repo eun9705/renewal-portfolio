@@ -37,7 +37,7 @@ const WorkList = ({listInfo}:WorkProps) => {
 };
 
 const ListContainer = styled(FlexRow)`
-    padding:5em 0;border-bottom: 1px solid #CCC;
+    flex-wrap:nowrap;padding:5em 0;border-bottom: 1px solid #CCC;
     &:last-child { border-bottom:none; }
     p,span { font-size:2.6rem;font-weight:500; }
     > p { width:27.5rem;margin-right:13.1rem;white-space:pre-wrap; }
@@ -65,7 +65,7 @@ const ContentBox = styled.div`
 
 const BadgeWrapper = styled.div`
     margin-top:.5rem;padding-left: 2rem;
-    div { margin-right:.5em; }
+    div { margin-right:.5em;margin-bottom:.5em; }
     ${media.xsmall} {
         div { margin-bottom:.5em; }
     }
