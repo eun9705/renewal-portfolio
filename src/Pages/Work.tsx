@@ -24,16 +24,16 @@ const Work = () => {
 };
 
 const WorkWrapper = styled(FlexCol)`
-    margin-top: 25rem;
-    .companyName { margin:10rem 0 1rem;font-size:4rem;font-weight:500; }
+    margin-top: 12.5em;
+    .companyName { margin:2.5em 0 .25em;font-size:4rem;font-weight:500; }
     .description { margin-bottom:5rem;font-size:2.2rem;color:var(--gray02); }
 `
 
 const ListWrapper = styled.div`
-    margin: 5rem 0 30rem;
-    &::before,&::after { content:'';display:block;width:calc(100% + 40rem);height:.5rem; }
+    margin: 2.5em 0 15em;
+    &::before,&::after { content:'';display:block;width:calc(100% + 40em);height:.2em; }
     &::before { border-radius: .5rem 0 0 .5rem;background-color:var(--sub01); }
-    &::after { position:relative;left:-40rem;border-radius: 0 .5rem .5rem 0;background-color:var(--sub03); }
+    &::after { position:relative;left:-40em;border-radius: 0 .5rem .5rem 0;background-color:var(--sub03); }
 `
 
 export default Work;

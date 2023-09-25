@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { Container, FlexCol, FlexRow, SubPageTitle, SubTitle } from "../Style/GlobalStyle";
-import { DeviceSize } from "../Style/Responsive";
+import { media } from "../Style/Responsive";
 import SkillDummy from '../Dummy/SkillData.json';
 import DotList from "../Components/DotList";
 import MainImg from '../Image/aboutImg.png';
@@ -67,23 +67,22 @@ const AboutWapper = styled(FlexCol)`
     position:relative;margin-top: 20rem;
     h1 {
         position:relative;padding-top:5.8rem;
-        &:after { content:'';position:absolute;left:-13.55vw;bottom:-3.3rem;display:block;width:57.3vw;height:.5rem;border-radius:0 .5rem .5rem 0;background-color:var(--sub03); }
+        &:after { content:'';position:absolute;left:-13.55vw;bottom:-.43em;display:block;width:57.3vw;height:.0625em;border-radius:0 .5rem .5rem 0;background-color:var(--sub03); }
     }
     .textWrapper { 
         position:relative;width:100%;height:40vw;margin-left:26rem; 
         p { margin-top:7rem;color:var(--gray02);line-height:calc(var(--basic-font-size) * 1.6); }
         img { position:absolute;right:13rem;bottom:0;z-index:-1;height:100%; }
     }
-    ${DeviceSize.large`
+    ${media.large} {
         h1{
             &:after  { width:68vw; }
         }
         .textWrapper {
             img { height:80%; }
         }
-    `}
-
-    ${DeviceSize.small`
+    }
+    ${media.small} {
         h1 {
             &:after {
                 width:100%;left:-7rem;
@@ -93,7 +92,15 @@ const AboutWapper = styled(FlexCol)`
             height:auto;padding:0 7rem;margin-left:0;
             img { position:inherit;right:0;left:0;height:50rem;margin:10rem auto 0; }
         }
-    `}
+    }
+    ${media.xsmall} {
+        margin-top:8em;
+        .textWrapper {
+            padding: 0 2.8em;
+            p { margin-top:2.8em;line-height:1.6em; }
+            img { height:20em; }
+        }
+    }
 `;
 
 const HowWorkWrapper = styled(FlexCol)`
@@ -103,9 +110,11 @@ const HowWorkWrapper = styled(FlexCol)`
         width:53.3vw;align-self: flex-start;margin-bottom:1rem;
         &:nth-child(even) { align-self: flex-end; }
     }
-    ${DeviceSize.xsmall`
-        img { width:100%; }
-    `}
+    ${media.xsmall} {
+        margin: 8em 0;
+        div { margin-top:3.2em; }
+        img { width:100%;margin-bottom:1em; }
+    }
 `
 
 const SkillWrapper = styled(FlexCol)`
@@ -119,7 +128,17 @@ const SkillWrapper = styled(FlexCol)`
             }
         }
     }
-    hr { margin:4rem 0 5rem;background-color:var(--gray02); }
+    hr { height:1px;margin:4em 0 5em;background-color:var(--gray02); }
+    ${media.xsmall} {
+        margin-bottom: 10em;
+        > div {
+            > div {
+                &:first-child { margin-top:6em; }
+                p { width:9.2em;padding-right:2em;font-size:1.2em; }
+                > div { width:calc(100% - 11.2em); }
+            }
+        }
+    }
 `
 
 export default About;
