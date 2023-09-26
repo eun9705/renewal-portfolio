@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'; 
 import { styled } from 'styled-components';
 import { media } from '../Style/Responsive';
-import arrowIcon from '../Image/arrowIcon.png';
+import arrowIcon from '../Image/arrowIcon.svg';
 
 interface StrProps {
     name:string;
