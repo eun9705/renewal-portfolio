@@ -5,7 +5,7 @@ import projectDummy from '../Dummy/projectData.json';
 import ImageCard from '../Components/ImageCard';
 import Banner from '../Components/Banner';
 import MainBg from '../Image/mainImg.png';
-import IntroduceBg from '../Image/IntroduceBg.svg';
+import IntroduceBg from '../Image/introduceBg.jpg';
 
 const Home = () => {
     return (

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { media } from '../Style/Responsive';
 import MenuNav from './MenuNav';
-import Logo from '../Image/logo.png'
+import Logo from '../Image/logo.svg'
 
 const Header = () => {
     return (

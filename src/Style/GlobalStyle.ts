@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
     html { font-size:62.5%;  }
     html,body { text-size-adjust:none;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;-o-text-size-adjust:none;overflow-x:hidden !important; }
     body { font-family:'sCore', '맑은고딕', sans-serif;font-size:var(--basic-font-size);font-weight:400; }
-    * { margin:0;padding:0;border: 0;box-sizing: border-box;font-size:var(--basic-font-size); }
+    * { margin:0;padding:0;border: 0;box-sizing: border-box;font-family:'sCore', '맑은고딕', sans-serif;font-size:var(--basic-font-size); }
     button { border:none;cursor: pointer; }
     a { text-decoration:none;color:var(--black); }
     strong { font-weight:600; }
