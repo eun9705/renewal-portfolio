@@ -4,10 +4,10 @@ import { media } from "../Style/Responsive";
 import SkillDummy from '../Dummy/SkillData.json';
 import DotList from "../Components/DotList";
 import MainImg from '../Image/aboutImg.png';
-import list01 from '../Image/howWork_1.jpg';
-import list02 from '../Image/howWork_2.jpg';
-import list03 from '../Image/howWork_3.jpg';
-import list04 from '../Image/howWork_4.jpg';
+import list01 from '../Image/howWork_1.png';
+import list02 from '../Image/howWork_2.png';
+import list03 from '../Image/howWork_3.png';
+import list04 from '../Image/howWork_4.png';
 
 const About = () => {
     return (
@@ -107,7 +107,7 @@ const HowWorkWrapper = styled(FlexCol)`
     width:100%;margin: 11rem 0 20rem;text-align:center;
     div { display:flex;flex-direction:column; margin-top:8rem; }
     img {
-        width:53.3vw;align-self: flex-start;margin-bottom:1rem;
+        width:53.3vw;align-self: flex-start;margin-bottom:1rem;opacity: 0;
         &:nth-child(even) { align-self: flex-end; }
     }
     ${media.xsmall} {
